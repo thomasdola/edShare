@@ -103,10 +103,10 @@
             </ul>
             <div class="navbar-right">
                 <ul class="nav navbar-nav navbar-nav-bordered navbar-nav-margin-right">
-                    {{-- user --}}
-                    {{-- <li class="dropdown user">
+                     {{--user--}}
+                     <li class="dropdown user">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            <img src="img/studyHub/images/people/110/guy-6.jpg" alt="" class="img-circle" /> Bill<span class="caret"></span>
+                            <img src="{{asset('img/studyHub/images/people/110/guy-6.jpg')}}" alt="" class="img-circle" /> Bill<span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu" role="menu">
                             <li><a href="website-student-dashboard.html"><i class="fa fa-bar-chart-o"></i> Dashboard</a></li>
@@ -114,11 +114,13 @@
                             <li><a href="website-student-profile.html"><i class="fa fa-user"></i> Profile</a></li>
                             <li><a href="login.html"><i class="fa fa-sign-out"></i> Logout</a></li>
                         </ul>
-                    </li> --}}
-                    {{-- END user --}}
+                    </li>
+                     {{--END user--}}
                 </ul>
-                <a href="{{ action('StudyHubController@register') }}" class="navbar-btn btn btn-success">Sign Up</a>
-                <a href="{{ action('StudyHubController@login') }}" class="navbar-btn btn btn-primary">Log In</a>
+                @if(Auth::guest())
+                <a href="{{ action('StudyHubController@getRegister') }}" class="navbar-btn btn btn-success">Sign Up</a>
+                <a href="{{ action('StudyHubController@getLogin') }}" class="navbar-btn btn btn-primary">Log In</a>
+                @endif
             </div>
         </div>
         <!-- /.navbar-collapse -->

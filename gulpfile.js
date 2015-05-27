@@ -37,7 +37,7 @@ elixir(function(mix) {
 	], 'public/js/home', 'resources/assets/home/vendor/js');
 
 
-	//mixing for study Hub
+	//Start mixing for study Hub
 	mix.styles([
 		'theme-core.css',
 		'module-essentials.css',
@@ -70,8 +70,80 @@ elixir(function(mix) {
 		'module-charts-flot.js',
 	], 'public/js/studyHub', 'resources/assets/studyHub/vendor/js');
 
-	elixir(function(mix) {
-    mix.copy('resources/assets/studyHub/vendor/js', 'public/js/studyHub');
 });
 
+elixir(function(mix) {
+   mix.copy('resources/assets/studyHub/vendor/js', 'public/js/studyHub');
+
 });
+
+elixir(function(mix){
+	elixir.config.sourcemaps = false;
+	//Start mixing for edBase
+		mix.styles([
+			'plugins/fullcalendar/fullcalendar.css',
+			'css/style.css',
+		], 'public/css/edBase/all_styles.min.css', 'resources/assets/edBase/vendor/assets');
+
+		mix.styles([
+			'styleTheme1.css',
+			'styleTheme2.css',
+			'styleTheme3.css',
+			'styleTheme4.css',
+		], 'public/css/edBase/all_themes.min.css', 'resources/assets/edBase/vendor/assets/css');
+
+		mix.scripts([
+			'js/jquery.min.js',
+			'js/jquery.ui.min.js',
+			'plugins/bootstrap/bootstrap.min.js',
+		], 'public/js/edBase/all_jquery.min.js', 'resources/assets/edBase/vendor/assets');
+
+
+		mix.scripts([
+			'js/modernizr/modernizr.js',
+			'plugins/mmenu/jquery.mmenu.js',
+			'js/styleswitch.js',
+		], 'public/js/edBase/all_html5.min.js', 'resources/assets/edBase/vendor/assets');
+
+		mix.scripts([
+			'form/form.js',
+			'datetime/datetime.js',
+			'pluginsForBS/pluginsForBS.js',
+			'miscellaneous/miscellaneous.js',
+			'datable/jquery.dataTables.min.js',
+			'datable/dataTables.bootstrap.js',
+		], 'public/js/edBase/all_plugins.min.js', 'resources/assets/edBase/vendor/assets/plugins');
+
+
+		mix.scripts([
+			'selectnav/selectnav.min.js',
+			'fancybox/jquery.fancybox.js',
+		], 'public/js/edBase/all_plugins_front.min.js', 'resources/assets/edBase/vendor/assets/plugins');
+
+
+		mix.copy('resources/assets/edBase/vendor/assets/js/caplet.custom.js', 'public/js/edBase/caplet.min.js');
+
+		mix.copy('resources/assets/edBase/vendor/assets/plugins/fancybox/jquery.fancybox.css', 'public/css/edBase/fancy.min.css');
+});
+
+
+elixir(function(mix){
+
+	mix.scripts([
+		'jquery.min.js',
+		'bootstrap.js',
+		'easing.js',
+		'jquery.magnific-popup.js',
+		'move-top.js',
+		'preview.js',
+		], 'public/js/supportingHand/js/all_js.min.js', 'resources/assets/supportingHand/vendor/js');
+
+	mix.styles([
+		'bootstrap.css',
+		'magnific-popup.css',
+		'style.css',
+		], 'public/css/supportingHand/css/all_css.min.css', 'resources/assets/supportingHand/vendor/css');
+
+});
+
+

@@ -5,29 +5,32 @@
 <body class="login">
     <div id="content">
         <div class="container-fluid">
-            <div class="lock-container">
+            {{--<form class="lock-container">--}}
+            {!! Form::open(['class'=>'lock-container']) !!}
                 <div class="panel panel-default text-center paper-shadow" data-z="0.5">
                     <h1 class="text-display-1 text-center margin-bottom-none">Sign In</h1>
-                    <img src="images/people/110/guy-5.jpg" class="img-circle width-80">
+                    <img src="{{asset('img/studyHub/images/people/110/guy-5.jpg')}}" class="img-circle width-80">
                     <div class="panel-body">
                         <div class="form-group">
                             <div class="form-control-material">
-                                <input class="form-control" id="username" type="text" placeholder="Username">
-                                <label for="username">Username</label>
+                                <input class="form-control" id="email" type="email" placeholder="Email" name="email" required>
+                                <label for="email">Email</label>
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="form-control-material">
-                                <input class="form-control" id="password" type="password" placeholder="Enter Password">
+                                <input class="form-control" id="password" type="password" placeholder="Enter Password" required>
                                 <label for="password">Password</label>
                             </div>
                         </div>
-                        <a href="website-student-dashboard.html" class="btn btn-primary">Login <i class="fa fa-fw fa-unlock-alt"></i></a>
+                        <button type="submit" class="btn btn-primary">Login <i class="fa fa-fw fa-unlock-alt"></i></button>
+                    {!! Form::close() !!}
                         <a href="#" class="forgot-password">Forgot password?</a>
-                        <a href="sign-up.html" class="link-text-color">Create account</a>
+                        <a href="{{url('study_hub/auth/register')}}" class="link-text-color">Create account</a>
                     </div>
                 </div>
-            </div>
+
+            {{--</form>--}}
         </div>
     </div>
     <!-- Footer -->

@@ -6,8 +6,8 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a href="index.html" class="navbar-brand">
-                        <img src="img/home/omega.gif" alt="One of the best themes ever">Omega
+                    <a href="{{ action('HomeController@index') }}" class="navbar-brand">
+                        InsightFactory
                     </a>
                 </div>
                 <nav class="collapse navbar-collapse main-navbar" role="navigation">

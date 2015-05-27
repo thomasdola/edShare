@@ -8266,12 +8266,12 @@ button.close {
 .fa-medium:before {
   content: "\f23a";
 }
-section.login {
+body.login {
   position: initial;
   background: #f5f5f5;
   padding-top: 0;
 }
-section.login #content {
+body.login #content {
   max-width: 760px;
   margin: auto;
   position: absolute;
@@ -8280,12 +8280,12 @@ section.login #content {
   bottom: 0;
   right: 0;
 }
-section.login .lock-container {
+body.login .lock-container {
   margin: auto;
   width: 300px;
 }
 @media (min-width: 480px) {
-  section.login .lock-container {
+  body.login .lock-container {
     bottom: 0;
     height: 550px;
     left: 0;
@@ -8294,15 +8294,15 @@ section.login .lock-container {
     right: 0;
   }
 }
-section.login .lock-container .panel {
+body.login .lock-container .panel {
   max-width: 300px !important;
   background: #fff;
   position: relative;
 }
-section.login .lock-container .panel img {
+body.login .lock-container .panel img {
   margin: 20px 0 10px;
 }
-section.login .lock-container .panel .forgot-password {
+body.login .lock-container .panel .forgot-password {
   margin: 10px 0 0;
   font-weight: 500;
   color: #42a5f5;
@@ -8343,13 +8343,13 @@ section.login .lock-container .panel .forgot-password {
 .sidebar .media .media-heading {
   margin: 5px 0 0;
 }
-section.survey {
+body.survey {
   position: relative;
   background: url('../images/photodune-6745585-modern-creative-workspace-m.jpg') top left no-repeat;
   background-attachment: fixed;
   background-size: cover;
 }
-section.survey .lock-container {
+body.survey .lock-container {
   margin: auto;
   width: 500px;
   top: 0;
@@ -8361,29 +8361,29 @@ section.survey .lock-container {
   display: table;
 }
 @media (max-width: 480px) {
-  section.survey .lock-container {
+  body.survey .lock-container {
     width: auto;
   }
 }
-section.survey .lock-container .panel {
+body.survey .lock-container .panel {
   background: rgba(255, 255, 255, 0.9);
   box-shadow: 0 1px 5px #999;
   position: relative;
 }
-section.survey .lock-container .panel .panel-heading {
+body.survey .lock-container .panel .panel-heading {
   padding: 20px;
   background: linear-gradient(to bottom, #ffffff, rgba(255, 255, 255, 0));
   border: none;
 }
-section.survey .lock-container .panel .panel-body {
+body.survey .lock-container .panel .panel-body {
   padding: 20px;
 }
-section.survey .lock-container .panel .panel-footer {
+body.survey .lock-container .panel .panel-footer {
   padding: 20px;
   background: linear-gradient(to top, #ffffff, rgba(255, 255, 255, 0));
   border: none;
 }
-section.survey .lock-container .panel .panel-footer .small {
+body.survey .lock-container .panel .panel-footer .small {
   position: absolute;
   bottom: 20px;
   left: 20px;

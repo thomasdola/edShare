@@ -23,7 +23,17 @@
                         </div>
                     </div>
                 </section>
-                <section id="two" class="section swatch-white">
+
+                    @include('home.partials.nav_bar_middle')
+
+
+                    @include('home.partials.full_mission')
+
+
+
+
+
+                <section id="team" class="section swatch-white">
                     <div class="container">
                         <div class="row">
                             <div class="col-md-12 text-center">
@@ -143,7 +153,7 @@
                         </div>
                     </div>
                 </section>
-                <section id="two" class="section swatch-white">
+                <section id="content_expert" class="section swatch-white">
                     <div class="container">
                         <div class="row">
                             <div class="col-md-12 text-center">
@@ -263,13 +273,13 @@
                         </div>
                     </div>
                 </section>
-                <section id="two" class="section swatch-white">
+                <section id="volunteers" class="section swatch-white">
                     <div class="container">
                         <div class="row">
                             <div class="col-md-12 text-center">
                                 <header class="text-center element-normal-top element-no-bottom not-condensed os-animation" data-os-animation="fadeInUp" data-os-animation-delay="0s">
                                     <h1 class="bigger hairline bordered bordered-normal">
-                                        Volonteers
+                                        Volunteers
                                     </h1>
                                 </header>
                                 <div class="row staff-list-container list-container element-short-top element-normal-bottom">
@@ -383,7 +393,7 @@
                         </div>
                     </div>
                 </section>
-                <section id="two" class="section swatch-gray">
+                <section id="partners" class="section swatch-gray">
                     <div class="container">
                         <div class="row">
                             <div class="col-md-12 text-center">

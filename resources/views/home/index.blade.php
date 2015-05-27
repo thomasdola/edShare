@@ -16,10 +16,10 @@
                                 <div class="col-md-12 text-center">
                                     <header class="element-tall-top element-normal-bottom condensed" data-start="opacity:1" data-center="opacity:1" data-100-top-bottom="opacity:0">
                                         <h1 class="super hairline bordered-normal">
-                                          we are a digital <strong>design</strong> agency with a passion for pixels.
+                                          <strong>Education</strong> through <strong>Techonology</strong> at its Best.
                                         </h1>
                                     </header>
-                                    <a href="#mission" class="scroll-to-id btn btn-link btn-lg element-no-top element-normal-bottom">
+                                    <a href="{{ action('HomeController@about') }}#mission" class="scroll-to-id btn btn-link btn-lg element-no-top element-normal-bottom">
                                         read more
                                    </a>
                                 </div>
@@ -47,10 +47,10 @@
                                                                     </div>
                                                 <h3 class="normal bold bordered bordered-small ">
 
-                                                        Study Hub
+                                                        studyHub
 
                                                 </h3>
-                                                <p class="">Create stunning pages which look great on <strong>any device</strong>. Clean HTML5 and CSS, <strong>beautifully coded</strong> to make modifications easy!</p>
+                                                <p class=""><strong>Personalized</strong> learning hub that empower learners to study at their own pace in and outside of the classroom.</p>
                                             </div>
                                         </div>
                                         <div class="col-md-3 ">
@@ -63,10 +63,10 @@
                                                 </div>
                                                 <h3 class="normal bold bordered bordered-small ">
 
-                                                        Eb Base
+                                                        edBase
 
                                                 </h3>
-                                                <p class="">Omega is the Most <strong>Flexible</strong> template We Have Ever Made! You can use it to make any kind of web site. Try it today, you wont be disappointed</p>
+                                                <p class="">Is a <strong>reporting</strong> and <strong>managing</strong> system used in collecting, managing and tracking data of schools and students.</p>
                                             </div>
                                         </div>
                                         <div class="col-md-3 ">
@@ -79,10 +79,10 @@
                                                 </div>
                                                 <h3 class="normal bold bordered bordered-small ">
 
-                                                        Supporting Hand
+                                                        supportingHand
 
                                                 </h3>
-                                                <p class="">With Omega you get a <strong>five star</strong> customer support. As with all our themes you will receive our 100% rock solid support and free updates.</p>
+                                                <p class="">Is <strong>online charity</strong> platform that makes it easier for anyone to offer a hand to support an educational need.</p>
                                             </div>
                                         </div>
                                         <div class="col-md-3 ">
@@ -95,10 +95,10 @@
                                                 </div>
                                                 <h3 class="normal bold bordered bordered-small ">
 
-                                                        Book Shelve
+                                                        bookBox
 
                                                 </h3>
-                                                <p class="">Omega is ultra flexible and lets you create <strong>stunning</strong> pages easily for any kind of site out of the box. Get started now.</p>
+                                                <p class="">Is a <strong>publishing</strong> and a <strong>marketing</strong> platform for writers to get their eBooks to readers on the network.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -108,6 +108,8 @@
                     </section>
                 </article>
             </div>
+
+           @include('home.partials.mission')
 
 
            @include('home.partials.footer')

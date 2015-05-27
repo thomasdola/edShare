@@ -1,61 +1,44 @@
-@extends('app')
+@extends('study_hub.partials.master')
 
-@section('content')
-<div class="container-fluid">
-	<div class="row">
-		<div class="col-md-8 col-md-offset-2">
-			<div class="panel panel-default">
-				<div class="panel-heading">Login</div>
-				<div class="panel-body">
-					@if (count($errors) > 0)
-						<div class="alert alert-danger">
-							<strong>Whoops!</strong> There were some problems with your input.<br><br>
-							<ul>
-								@foreach ($errors->all() as $error)
-									<li>{{ $error }}</li>
-								@endforeach
-							</ul>
-						</div>
-					@endif
+@section('body')
 
-					<form class="form-horizontal" role="form" method="POST" action="{{ url('/auth/login') }}">
-						<input type="hidden" name="_token" value="{{ csrf_token() }}">
+<body class="login">
+    <div id="content">
+        <div class="container-fluid">
+            {{--<form class="lock-container">--}}
+            {!! Form::open(['class'=>'lock-container']) !!}
+                <div class="panel panel-default text-center paper-shadow" data-z="0.5">
+                    <h1 class="text-display-1 text-center margin-bottom-none">Sign In</h1>
+                    <img src="{{asset('img/studyHub/images/people/110/guy-5.jpg')}}" class="img-circle width-80">
+                    <div class="panel-body">
+                        <div class="form-group">
+                            <div class="form-control-material">
+                                <input class="form-control" id="email" type="email" placeholder="Email" name="email" required>
+                                <label for="email">Email</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-control-material">
+                                <input class="form-control" id="password" type="password" placeholder="Enter Password" required>
+                                <label for="password">Password</label>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Login <i class="fa fa-fw fa-unlock-alt"></i></button>
+                    {!! Form::close() !!}
+                        <a href="{{url('/auth/password')}}" class="forgot-password">Forgot password?</a>
+                        <a href="{{url('/auth/register')}}" class="link-text-color">Create account</a>
+                    </div>
+                </div>
 
-						<div class="form-group">
-							<label class="col-md-4 control-label">E-Mail Address</label>
-							<div class="col-md-6">
-								<input type="email" class="form-control" name="email" value="{{ old('email') }}">
-							</div>
-						</div>
+            {{--</form>--}}
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer class="footer">
+        <strong>Learning</strong> v1.0.0 &copy; Copyright 2015
+    </footer>
+    <!-- // Footer -->
+    @include('study_hub.partials.scripts')
+</body>
 
-						<div class="form-group">
-							<label class="col-md-4 control-label">Password</label>
-							<div class="col-md-6">
-								<input type="password" class="form-control" name="password">
-							</div>
-						</div>
-
-						<div class="form-group">
-							<div class="col-md-6 col-md-offset-4">
-								<div class="checkbox">
-									<label>
-										<input type="checkbox" name="remember"> Remember Me
-									</label>
-								</div>
-							</div>
-						</div>
-
-						<div class="form-group">
-							<div class="col-md-6 col-md-offset-4">
-								<button type="submit" class="btn btn-primary">Login</button>
-
-								<a class="btn btn-link" href="{{ url('/password/email') }}">Forgot Your Password?</a>
-							</div>
-						</div>
-					</form>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-@endsection
+@stop
